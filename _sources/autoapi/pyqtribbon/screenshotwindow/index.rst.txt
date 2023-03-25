@@ -1,0 +1,40 @@
+:orphan:
+
+:py:mod:`pyqtribbon.screenshotwindow`
+=====================================
+
+.. py:module:: pyqtribbon.screenshotwindow
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.screenshotwindow.RibbonScreenShotWindow
+
+
+
+
+.. py:class:: RibbonScreenShotWindow(fileName: str = 'shot.jpg', *args, **kwargs)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QMainWindow`
+
+   This class is just for taking a screenshot of the window, the window will be closed 0.1s after it is shown.
+
+   .. py:method:: setScreenShotFileName(fileName: str)
+
+      Set the file name for the screenshot.
+
+      :param fileName: The file name for the screenshot.
+
+
+   .. py:method:: takeScreenShot()
+
+      Take a screenshot of the window.
+
+
+

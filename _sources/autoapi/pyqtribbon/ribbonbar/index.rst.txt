@@ -1,0 +1,378 @@
+:orphan:
+
+:py:mod:`pyqtribbon.ribbonbar`
+==============================
+
+.. py:module:: pyqtribbon.ribbonbar
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.ribbonbar.RibbonStyle
+   pyqtribbon.ribbonbar.RibbonStackedWidget
+   pyqtribbon.ribbonbar.RibbonBar
+
+
+
+
+.. py:class:: RibbonStyle
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   Enum where members are also (and must be) ints
+
+
+.. py:class:: RibbonStackedWidget(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QStackedWidget`
+
+   Stacked widget that is used to display the ribbon.
+
+
+.. py:class:: RibbonBar(title: str = 'Ribbon Bar Title', maxRows=6, parent=None)           RibbonBar(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QMenuBar`
+
+   The RibbonBar class is the top level widget that contains the ribbon.
+
+   .. py:method:: setRibbonStyle(style: RibbonStyle)
+
+      Set the style of the ribbon.
+
+      :param style: The style to set.
+
+
+   .. py:method:: applicationOptionButton() -> pyqtribbon.titlewidget.RibbonApplicationButton
+
+      Return the application button.
+
+
+   .. py:method:: setApplicationIcon(icon: qtpy.QtGui.QIcon)
+
+      Set the application icon.
+
+      :param icon: The icon to set.
+
+
+   .. py:method:: addTitleWidget(widget: qtpy.QtWidgets.QWidget)
+
+      Add a widget to the title widget.
+
+      :param widget: The widget to add.
+
+
+   .. py:method:: removeTitleWidget(widget: qtpy.QtWidgets.QWidget)
+
+      Remove a widget from the title widget.
+
+      :param widget: The widget to remove.
+
+
+   .. py:method:: insertTitleWidget(index: int, widget: qtpy.QtWidgets.QWidget)
+
+      Insert a widget to the title widget.
+
+      :param index: The index to insert the widget.
+      :param widget: The widget to insert.
+
+
+   .. py:method:: addFileMenu() -> pyqtribbon.menu.RibbonMenu
+
+      Add a file menu to the ribbon.
+
+
+   .. py:method:: ribbonHeight() -> int
+
+      Get the total height of the ribbon.
+
+      :return: The height of the ribbon.
+
+
+   .. py:method:: setRibbonHeight(height: int)
+
+      Set the total height of the ribbon.
+
+      :param height: The height to set.
+
+
+   .. py:method:: tabBar() -> pyqtribbon.tabbar.RibbonTabBar
+
+      Return the tab bar of the ribbon.
+
+      :return: The tab bar of the ribbon.
+
+
+   .. py:method:: quickAccessToolBar() -> qtpy.QtWidgets.QToolBar
+
+      Return the quick access toolbar of the ribbon.
+
+      :return: The quick access toolbar of the ribbon.
+
+
+   .. py:method:: addQuickAccessButton(button: qtpy.QtWidgets.QToolButton)
+
+      Add a button to the quick access bar.
+
+      :param button: The button to add.
+
+
+   .. py:method:: setQuickAccessButtonHeight(height: int = 30)
+
+      Set the height of the quick access buttons.
+
+      :param height: The height to set.
+
+
+   .. py:method:: title() -> str
+
+      Return the title of the ribbon.
+
+      :return: The title of the ribbon.
+
+
+   .. py:method:: setTitle(title: str)
+
+      Set the title of the ribbon.
+
+      :param title: The title to set.
+
+
+   .. py:method:: rightToolBar() -> qtpy.QtWidgets.QToolBar
+
+      Return the right toolbar of the ribbon.
+
+      :return: The right toolbar of the ribbon.
+
+
+   .. py:method:: addRightToolButton(button: qtpy.QtWidgets.QToolButton)
+
+      Add a widget to the right button bar.
+
+      :param button: The button to add.
+
+
+   .. py:method:: setRightToolBarHeight(height: int = 24)
+
+      Set the height of the right buttons.
+
+      :param height: The height to set.
+
+
+   .. py:method:: helpRibbonButton() -> qtpy.QtWidgets.QToolButton
+
+      Return the help button of the ribbon.
+
+      :return: The help button of the ribbon.
+
+
+   .. py:method:: setHelpButtonIcon(icon: qtpy.QtGui.QIcon)
+
+      Set the icon of the help button.
+
+      :param icon: The icon to set.
+
+
+   .. py:method:: removeHelpButton()
+
+      Remove the help button from the ribbon.
+
+
+   .. py:method:: collapseRibbonButton() -> qtpy.QtWidgets.QToolButton
+
+      Return the collapse ribbon button.
+
+      :return: The collapse ribbon button.
+
+
+   .. py:method:: setCollapseButtonIcon(icon: qtpy.QtGui.QIcon)
+
+      Set the icon of the min button.
+
+      :param icon: The icon to set.
+
+
+   .. py:method:: removeCollapseButton()
+
+      Remove the min button from the ribbon.
+
+
+   .. py:method:: category(name: str) -> pyqtribbon.category.RibbonCategory
+
+      Return the category with the given name.
+
+      :param name: The name of the category.
+      :return: The category with the given name.
+
+
+   .. py:method:: categories() -> Dict[str, pyqtribbon.category.RibbonCategory]
+
+      Return a list of categories of the ribbon.
+
+      :return: A dict of categories of the ribbon.
+
+
+   .. py:method:: addCategoriesBy(data: Dict[str, Dict]) -> Dict[str, pyqtribbon.category.RibbonCategory]
+
+      Add categories from a dict.
+
+      :param data: The dict of categories. The dict is of the form:
+
+          .. code-block:: python
+
+              {
+                  "category-title": {
+                      "style": RibbonCategoryStyle.Normal,
+                      "color": QtCore.Qt.red,
+                      "panels": {
+                          "panel-title": {
+                              "showPanelOptionButton": True,
+                              "widgets": {
+                                  "widget-name": {
+                                      "type": "Button",
+                                      "arguments": {
+                                          "key1": "value1",
+                                          "key2": "value2"
+                                      }
+                                  },
+                              }
+                          },
+                      },
+                  }
+              }
+      :return: A dict of categories of the ribbon.
+
+
+   .. py:method:: addCategory(title: str, style=RibbonCategoryStyle.Normal, color: qtpy.QtGui.QColor = None) -> Union[pyqtribbon.category.RibbonNormalCategory, pyqtribbon.category.RibbonContextCategory]
+
+      Add a new category to the ribbon.
+
+      :param title: The title of the category.
+      :param style: The button style of the category.
+      :param color: The color of the context category, only used if style is Context, if None, the default color
+                    will be used.
+      :return: The newly created category.
+
+
+   .. py:method:: addNormalCategory(title: str) -> pyqtribbon.category.RibbonNormalCategory
+
+      Add a new category to the ribbon.
+
+      :param title: The title of the category.
+      :return: The newly created category.
+
+
+   .. py:method:: addContextCategory(title: str, color: Union[qtpy.QtGui.QColor, qtpy.QtCore.Qt.GlobalColor] = QtCore.Qt.blue) -> pyqtribbon.category.RibbonContextCategory
+
+      Add a new context category to the ribbon.
+
+      :param title: The title of the category.
+      :param color: The color of the context category, if None, the default color will be used.
+      :return: The newly created category.
+
+
+   .. py:method:: addContextCategories(name: str, titles: List[str], color: Union[qtpy.QtGui.QColor, qtpy.QtCore.Qt.GlobalColor] = QtCore.Qt.blue) -> pyqtribbon.category.RibbonContextCategories
+
+      Add a group of context categories with the same tab color to the ribbon.
+
+      :param name: The name of the context categories.
+      :param titles: The title of the category.
+      :param color: The color of the context category, if None, the default color will be used.
+      :return: The newly created category.
+
+
+   .. py:method:: showCategoryByIndex(index: int)
+
+      Show category by tab index
+
+      :param index: tab index
+
+
+   .. py:method:: showContextCategory(category: Union[pyqtribbon.category.RibbonContextCategory, pyqtribbon.category.RibbonContextCategories])
+
+      Show the given category or categories, if it is not a context category, nothing happens.
+
+      :param category: The category to show.
+
+
+   .. py:method:: hideContextCategory(category: Union[pyqtribbon.category.RibbonContextCategory, pyqtribbon.category.RibbonContextCategories])
+
+      Hide the given category or categories, if it is not a context category, nothing happens.
+
+      :param category: The category to hide.
+
+
+   .. py:method:: categoryVisible(category: pyqtribbon.category.RibbonCategory) -> bool
+
+      Return whether the category is shown.
+
+      :param category: The category to check.
+
+      :return: Whether the category is shown.
+
+
+   .. py:method:: removeCategory(category: pyqtribbon.category.RibbonCategory)
+
+      Remove a category from the ribbon.
+
+      :param category: The category to remove.
+
+
+   .. py:method:: removeCategories(categories: pyqtribbon.category.RibbonContextCategories)
+
+      Remove a list of categories from the ribbon.
+
+      :param categories: The categories to remove.
+
+
+   .. py:method:: setCurrentCategory(category: pyqtribbon.category.RibbonCategory)
+
+      Set the current category.
+
+      :param category: The category to set.
+
+
+   .. py:method:: currentCategory() -> pyqtribbon.category.RibbonCategory
+
+      Return the current category.
+
+      :return: The current category.
+
+
+   .. py:method:: minimumSizeHint() -> qtpy.QtCore.QSize
+
+      Return the minimum size hint of the widget.
+
+      :return: The minimum size hint.
+
+
+   .. py:method:: showRibbon()
+
+      Show the ribbon.
+
+
+   .. py:method:: hideRibbon()
+
+      Hide the ribbon.
+
+
+   .. py:method:: ribbonVisible() -> bool
+
+      Get the visibility of the ribbon.
+
+      :return: True if the ribbon is visible, False otherwise.
+
+
+   .. py:method:: setRibbonVisible(visible: bool)
+
+      Set the visibility of the ribbon.
+
+      :param visible: True to show the ribbon, False to hide it.
+
+
+

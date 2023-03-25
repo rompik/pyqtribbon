@@ -1,0 +1,325 @@
+:orphan:
+
+:py:mod:`pyqtribbon.category`
+=============================
+
+.. py:module:: pyqtribbon.category
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.category.RibbonCategoryStyle
+   pyqtribbon.category.RibbonCategoryLayoutButton
+   pyqtribbon.category.RibbonCategoryScrollArea
+   pyqtribbon.category.RibbonCategoryScrollAreaContents
+   pyqtribbon.category.RibbonCategoryLayoutWidget
+   pyqtribbon.category.RibbonCategory
+   pyqtribbon.category.RibbonNormalCategory
+   pyqtribbon.category.RibbonContextCategory
+   pyqtribbon.category.RibbonContextCategories
+
+
+
+
+.. py:class:: RibbonCategoryStyle
+
+   Bases: :py:obj:`enum.IntEnum`
+
+   The button style of a category.
+
+
+.. py:class:: RibbonCategoryLayoutButton
+
+   Bases: :py:obj:`qtpy.QtWidgets.QToolButton`
+
+   Previous/Next buttons in the category when the
+   size is not enough for the widgets.
+
+
+.. py:class:: RibbonCategoryScrollArea
+
+   Bases: :py:obj:`qtpy.QtWidgets.QScrollArea`
+
+   Scroll area for the gallery
+
+
+.. py:class:: RibbonCategoryScrollAreaContents
+
+   Bases: :py:obj:`qtpy.QtWidgets.QFrame`
+
+   Scroll area contents for the gallery
+
+
+.. py:class:: RibbonCategoryLayoutWidget(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QFrame`
+
+   The category layout widget's category scroll area to arrange the widgets in the category.
+
+   .. py:method:: paintEvent(a0: qtpy.QtGui.QPaintEvent) -> None
+
+      Override the paint event to draw the background.
+
+
+   .. py:method:: resizeEvent(a0: qtpy.QtGui.QResizeEvent) -> None
+
+      Override the resize event to resize the scroll area.
+
+
+   .. py:method:: autoSetScrollButtonsVisible()
+
+      Set the visibility of the scroll buttons.
+
+
+   .. py:method:: scrollPrevious()
+
+      Scroll the category to the previous widget.
+
+
+   .. py:method:: scrollNext()
+
+      Scroll the category to the next widget.
+
+
+   .. py:method:: addWidget(widget: qtpy.QtWidgets.QWidget)
+
+      Add a widget to the category layout.
+
+      :param widget: The widget to add.
+
+
+   .. py:method:: removeWidget(widget: qtpy.QtWidgets.QWidget)
+
+      Remove a widget from the category layout.
+
+      :param widget: The widget to remove.
+
+
+   .. py:method:: takeWidget(widget: qtpy.QtWidgets.QWidget) -> qtpy.QtWidgets.QWidget
+
+      Remove and return a widget from the category layout.
+
+      :param widget: The widget to remove.
+      :return: The widget that was removed.
+
+
+
+.. py:class:: RibbonCategory(title: str = '', style: RibbonCategoryStyle = RibbonCategoryStyle.Normal, color: qtpy.QtGui.QColor = None, parent=None)           RibbonCategory(parent=None)
+
+   Bases: :py:obj:`RibbonCategoryLayoutWidget`
+
+   The RibbonCategory is the logical grouping that represents the contents of a ribbon tab.
+
+   .. py:method:: setMaximumRows(rows: int)
+
+      Set the maximum number of rows.
+
+      :param rows: The maximum number of rows.
+
+
+   .. py:method:: title() -> str
+
+      Return the title of the category.
+
+
+   .. py:method:: setCategoryStyle(style: RibbonCategoryStyle)
+
+      Set the button style of the category.
+
+      :param style: The button style.
+
+
+   .. py:method:: categoryStyle() -> RibbonCategoryStyle
+
+      Return the button style of the category.
+
+      :return: The button style.
+
+
+   .. py:method:: addPanelsBy(data: Dict[str, Dict]) -> Dict[str, pyqtribbon.panel.RibbonPanel]
+
+      Add panels from a dictionary.
+
+      :param data: The dictionary. The keys are the titles of the panels. The value is a dictionary of
+                   arguments. the argument showPanelOptionButton is a boolean to decide whether to show
+                   the panel option button, the rest arguments are passed to the RibbonPanel.addWidgetsBy() method.
+                   The dict is of the form:
+
+                   .. code-block:: python
+
+                      {
+                          "panel-title": {
+                              "showPanelOptionButton": True,
+                              "widgets": {
+                                  "widget-name": {
+                                      "type": "Button",
+                                      "arguments": {
+                                          "key1": "value1",
+                                          "key2": "value2"
+                                      }
+                                  },
+                              }
+                          },
+                      }
+      :return: A dictionary of the newly created panels.
+
+
+   .. py:method:: addPanel(title: str, showPanelOptionButton=True) -> pyqtribbon.panel.RibbonPanel
+
+      Add a new panel to the category.
+
+      :param title: The title of the panel.
+      :param showPanelOptionButton: Whether to show the panel option button.
+      :return: The newly created panel.
+
+
+   .. py:method:: removePanel(title: str)
+
+      Remove a panel from the category.
+
+      :param title: The title of the panel.
+
+
+   .. py:method:: takePanel(title: str) -> pyqtribbon.panel.RibbonPanel
+
+      Remove and return a panel from the category.
+
+      :param title: The title of the panel.
+      :return: The removed panel.
+
+
+   .. py:method:: panel(title: str) -> pyqtribbon.panel.RibbonPanel
+
+      Return a panel from the category.
+
+      :param title: The title of the panel.
+      :return: The panel.
+
+
+   .. py:method:: panels() -> Dict[str, pyqtribbon.panel.RibbonPanel]
+
+      Return all panels in the category.
+
+      :return: The panels.
+
+
+
+.. py:class:: RibbonNormalCategory(title: str, parent: qtpy.QtWidgets.QWidget)
+
+   Bases: :py:obj:`RibbonCategory`
+
+   A normal category.
+
+   .. py:method:: setCategoryStyle(style: RibbonCategoryStyle)
+
+      Set the button style of the category.
+
+      :param style: The button style.
+
+
+
+.. py:class:: RibbonContextCategory(title: str, color: qtpy.QtGui.QColor, parent: qtpy.QtWidgets.QWidget)
+
+   Bases: :py:obj:`RibbonCategory`
+
+   A context category.
+
+   .. py:method:: setCategoryStyle(style: RibbonCategoryStyle)
+
+      Set the button style of the category.
+
+      :param style: The button style.
+
+
+   .. py:method:: color() -> qtpy.QtGui.QColor
+
+      Return the color of the context category.
+
+      :return: The color of the context category.
+
+
+   .. py:method:: setColor(color: qtpy.QtGui.QColor)
+
+      Set the color of the context category.
+
+      :param color: The color of the context category.
+
+
+   .. py:method:: showContextCategory()
+
+      Show the given category, if it is not a context category, nothing happens.
+
+
+   .. py:method:: hideContextCategory()
+
+      Hide the given category, if it is not a context category, nothing happens.
+
+
+   .. py:method:: categoryVisible() -> bool
+
+      Return whether the category is shown.
+
+      :return: Whether the category is shown.
+
+
+   .. py:method:: setCategoryVisible(visible: bool)
+
+      Set the state of the category.
+
+      :param visible: The state.
+
+
+
+.. py:class:: RibbonContextCategories(name: str, color: qtpy.QtGui.QColor, categories: Dict[str, RibbonContextCategory], ribbon)
+
+   Bases: :py:obj:`Dict`\ [\ :py:obj:`str`\ , :py:obj:`RibbonContextCategory`\ ]
+
+   A list of context categories.
+
+   .. py:method:: name() -> str
+
+      Return the name of the context categories.
+
+
+   .. py:method:: setName(name: str)
+
+      Set the name of the context categories.
+
+
+   .. py:method:: color() -> qtpy.QtGui.QColor
+
+      Return the color of the context categories.
+
+
+   .. py:method:: setColor(color: qtpy.QtGui.QColor)
+
+      Set the color of the context categories.
+
+
+   .. py:method:: showContextCategories()
+
+      Show the categories
+
+
+   .. py:method:: hideContextCategories()
+
+      Hide the categories
+
+
+   .. py:method:: categoriesVisible() -> bool
+
+      Return whether the categories are shown.
+
+
+   .. py:method:: setCategoriesVisible(visible: bool)
+
+      Set the state of the categories.
+
+
+

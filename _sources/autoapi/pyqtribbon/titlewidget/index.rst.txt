@@ -1,0 +1,193 @@
+:orphan:
+
+:py:mod:`pyqtribbon.titlewidget`
+================================
+
+.. py:module:: pyqtribbon.titlewidget
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.titlewidget.RibbonApplicationButton
+   pyqtribbon.titlewidget.RibbonTitleLabel
+   pyqtribbon.titlewidget.RibbonTitleWidget
+
+
+
+
+.. py:class:: RibbonApplicationButton
+
+   Bases: :py:obj:`qtpy.QtWidgets.QToolButton`
+
+   Application button in the ribbon bar.
+
+   .. py:method:: addFileMenu() -> pyqtribbon.menu.RibbonMenu
+
+      Add a new ribbon menu to the application button.
+
+      :return: The new ribbon menu.
+
+
+
+.. py:class:: RibbonTitleLabel
+
+   Bases: :py:obj:`qtpy.QtWidgets.QLabel`
+
+   Title label in the ribbon bar.
+
+
+.. py:class:: RibbonTitleWidget(title='PyQtRibbon', parent=None)           RibbonTitleWidget(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QFrame`
+
+   The title widget of the ribbon.
+
+   .. py:method:: applicationButton() -> RibbonApplicationButton
+
+      Return the application button.
+
+
+   .. py:method:: setApplicationIcon(icon: qtpy.QtGui.QIcon)
+
+      Set the application icon.
+
+      :param icon: The icon to set.
+
+
+   .. py:method:: addTitleWidget(widget: qtpy.QtWidgets.QWidget)
+
+      Add a widget to the title layout.
+
+      :param widget: The widget to add.
+
+
+   .. py:method:: insertTitleWidget(index: int, widget: qtpy.QtWidgets.QWidget)
+
+      Insert a widget to the title layout.
+
+      :param index: The index to insert the widget.
+      :param widget: The widget to insert.
+
+
+   .. py:method:: removeTitleWidget(widget: qtpy.QtWidgets.QWidget)
+
+      Remove a widget from the title layout.
+
+      :param widget: The widget to remove.
+
+
+   .. py:method:: tabBar() -> pyqtribbon.tabbar.RibbonTabBar
+
+      Return the tab bar of the ribbon.
+
+      :return: The tab bar of the ribbon.
+
+
+   .. py:method:: quickAccessToolBar() -> qtpy.QtWidgets.QToolBar
+
+      Return the quick access toolbar of the ribbon.
+
+      :return: The quick access toolbar of the ribbon.
+
+
+   .. py:method:: quickAccessButtons() -> List[qtpy.QtWidgets.QToolButton]
+
+      Return the quick access buttons of the ribbon.
+
+      :return: The quick access buttons of the ribbon.
+
+
+   .. py:method:: addQuickAccessButton(button: qtpy.QtWidgets.QToolButton)
+
+      Add a widget to the quick access bar.
+
+      :param button: The button to add.
+
+
+   .. py:method:: setQuickAccessButtonHeight(height: int = 30)
+
+      Set the height of the quick access buttons.
+
+      :param height: The height to set.
+
+
+   .. py:method:: title() -> str
+
+      Return the title of the ribbon.
+
+      :return: The title of the ribbon.
+
+
+   .. py:method:: setTitle(title: str)
+
+      Set the title of the ribbon.
+
+      :param title: The title to set.
+
+
+   .. py:method:: rightToolBar() -> qtpy.QtWidgets.QToolBar
+
+      Return the right toolbar of the ribbon.
+
+      :return: The right toolbar of the ribbon.
+
+
+   .. py:method:: addRightToolButton(button: qtpy.QtWidgets.QToolButton)
+
+      Add a widget to the right button bar.
+
+      :param button: The button to add.
+
+
+   .. py:method:: setRightToolBarHeight(height: int = 24)
+
+      Set the height of the right buttons.
+
+      :param height: The height to set.
+
+
+   .. py:method:: helpRibbonButton() -> qtpy.QtWidgets.QToolButton
+
+      Return the help ribbon button.
+
+      :return: The help ribbon button.
+
+
+   .. py:method:: setHelpButtonIcon(icon: qtpy.QtGui.QIcon)
+
+      Set the icon of the help button.
+
+      :param icon: The icon to set.
+
+
+   .. py:method:: removeHelpButton()
+
+      Remove the help button from the ribbon.
+
+
+   .. py:method:: setCollapseButtonIcon(icon: qtpy.QtGui.QIcon)
+
+      Set the icon of the min button.
+
+      :param icon: The icon to set.
+
+
+   .. py:method:: removeCollapseButton()
+
+      Remove the min button from the ribbon.
+
+
+   .. py:method:: collapseRibbonButton() -> qtpy.QtWidgets.QToolButton
+
+      Return the collapse ribbon button.
+
+      :return: The collapse ribbon button.
+
+
+

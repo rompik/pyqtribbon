@@ -1,0 +1,71 @@
+:orphan:
+
+:py:mod:`pyqtribbon.toolbutton`
+===============================
+
+.. py:module:: pyqtribbon.toolbutton
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.toolbutton.RibbonButtonStyle
+   pyqtribbon.toolbutton.RibbonToolButton
+
+
+
+
+.. py:class:: RibbonButtonStyle
+
+   Bases: :py:obj:`enum.Enum`
+
+   Button style, Small, Medium, or Large.
+
+
+.. py:class:: RibbonToolButton(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QToolButton`
+
+   Tool button that is showed in the ribbon.
+
+   .. py:method:: setMaximumIconSize(size: int)
+
+      Set the maximum icon size of the button.
+
+      :param size: The maximum icon size of the button.
+
+
+   .. py:method:: maximumIconSize() -> int
+
+      Get the maximum icon size of the button.
+
+      :return: The maximum icon size of the button.
+
+
+   .. py:method:: setButtonStyle(style: RibbonButtonStyle)
+
+      Set the button style of the button.
+
+      :param style: The button style of the button.
+
+
+   .. py:method:: buttonStyle() -> RibbonButtonStyle
+
+      Get the button style of the button.
+
+      :return: The button style of the button.
+
+
+   .. py:method:: addRibbonMenu() -> pyqtribbon.menu.RibbonMenu
+
+      Add a ribbon menu for the button.
+
+      :return: The added ribbon menu.
+
+
+

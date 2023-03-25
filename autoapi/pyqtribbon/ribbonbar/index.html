@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyqtribbon.ribbonbar &mdash; pyqtribbon 0.0.post495+gbcd238c documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster.custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster.bundle.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster-sideTip-shadow.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster-sideTip-punk.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster-sideTip-noir.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster-sideTip-light.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/tooltipster-sideTip-borderless.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/micromodal.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/sphinx-codeautolink.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/sphinx_rtd_theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/hoverxref.js"></script>
+        <script src="../../../_static/js/tooltipster.bundle.min.js"></script>
+        <script src="../../../_static/js/micromodal.min.js"></script>
+        <script src="../../../_static/clipboard.min.js"></script>
+        <script src="../../../_static/copybutton.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            pyqtribbon
+          </a>
+              <div class="version">
+                0.0.post495+gbcd238c
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../ribbon.html">The Ribbon Bar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../user.html">User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">pyqtribbon</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyqtribbon.ribbonbar</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/pyqtribbon/ribbonbar/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pyqtribbon.ribbonbar">
+<span id="pyqtribbon-ribbonbar"></span><h1><a class="hxr-hoverxref hxr-modal reference internal" href="#module-pyqtribbon.ribbonbar" title="pyqtribbon.ribbonbar"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pyqtribbon.ribbonbar</span></code></a><a class="headerlink" href="#module-pyqtribbon.ribbonbar" title="Permalink to this heading"></a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="hxr-hoverxref hxr-tooltip reference internal" href="#pyqtribbon.ribbonbar.RibbonStyle" title="pyqtribbon.ribbonbar.RibbonStyle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonStyle</span></code></a></p></td>
+<td><p>Enum where members are also (and must be) ints</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="hxr-hoverxref hxr-tooltip reference internal" href="#pyqtribbon.ribbonbar.RibbonStackedWidget" title="pyqtribbon.ribbonbar.RibbonStackedWidget"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonStackedWidget</span></code></a></p></td>
+<td><p>Stacked widget that is used to display the ribbon.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="hxr-hoverxref hxr-tooltip reference internal" href="#pyqtribbon.ribbonbar.RibbonBar" title="pyqtribbon.ribbonbar.RibbonBar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RibbonBar</span></code></a></p></td>
+<td><p>The RibbonBar class is the top level widget that contains the ribbon.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonStyle">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqtribbon.ribbonbar.</span></span><span class="sig-name descname"><span class="pre">RibbonStyle</span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L20-L22"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonStyle" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/enum.html#enum.IntEnum" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a></p>
+<p>Enum where members are also (and must be) ints</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonStackedWidget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqtribbon.ribbonbar.</span></span><span class="sig-name descname"><span class="pre">RibbonStackedWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L29-L40"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonStackedWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">qtpy.QtWidgets.QStackedWidget</span></code></p>
+<p>Stacked widget that is used to display the ribbon.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyqtribbon.ribbonbar.</span></span><span class="sig-name descname"><span class="pre">RibbonBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title:</span> <span class="pre">str</span> <span class="pre">=</span> <span class="pre">'Ribbon</span> <span class="pre">Bar</span> <span class="pre">Title'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxRows=6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent=None)</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">RibbonBar(parent=None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L43-L593"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-obj docutils literal notranslate"><span class="pre">qtpy.QtWidgets.QMenuBar</span></code></p>
+<p>The RibbonBar class is the top level widget that contains the ribbon.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setRibbonStyle">
+<span class="sig-name descname"><span class="pre">setRibbonStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="#pyqtribbon.ribbonbar.RibbonStyle" title="pyqtribbon.ribbonbar.RibbonStyle"><span class="pre">RibbonStyle</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L158-L166"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setRibbonStyle" title="Permalink to this definition"></a></dt>
+<dd><p>Set the style of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>style</strong> – The style to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.applicationOptionButton">
+<span class="sig-name descname"><span class="pre">applicationOptionButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../titlewidget/index.html#pyqtribbon.titlewidget.RibbonApplicationButton" title="pyqtribbon.titlewidget.RibbonApplicationButton"><span class="pre">pyqtribbon.titlewidget.RibbonApplicationButton</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L168-L170"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.applicationOptionButton" title="Permalink to this definition"></a></dt>
+<dd><p>Return the application button.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setApplicationIcon">
+<span class="sig-name descname"><span class="pre">setApplicationIcon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtGui.QIcon</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L172-L177"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setApplicationIcon" title="Permalink to this definition"></a></dt>
+<dd><p>Set the application icon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>icon</strong> – The icon to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addTitleWidget">
+<span class="sig-name descname"><span class="pre">addTitleWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtWidgets.QWidget</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L179-L184"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addTitleWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Add a widget to the title widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> – The widget to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.removeTitleWidget">
+<span class="sig-name descname"><span class="pre">removeTitleWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtWidgets.QWidget</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L186-L191"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.removeTitleWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Remove a widget from the title widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>widget</strong> – The widget to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.insertTitleWidget">
+<span class="sig-name descname"><span class="pre">insertTitleWidget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">widget</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtWidgets.QWidget</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L193-L199"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.insertTitleWidget" title="Permalink to this definition"></a></dt>
+<dd><p>Insert a widget to the title widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> – The index to insert the widget.</p></li>
+<li><p><strong>widget</strong> – The widget to insert.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addFileMenu">
+<span class="sig-name descname"><span class="pre">addFileMenu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pyqtribbon.menu.RibbonMenu</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L201-L203"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addFileMenu" title="Permalink to this definition"></a></dt>
+<dd><p>Add a file menu to the ribbon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.ribbonHeight">
+<span class="sig-name descname"><span class="pre">ribbonHeight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L205-L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.ribbonHeight" title="Permalink to this definition"></a></dt>
+<dd><p>Get the total height of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The height of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setRibbonHeight">
+<span class="sig-name descname"><span class="pre">setRibbonHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L212-L218"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setRibbonHeight" title="Permalink to this definition"></a></dt>
+<dd><p>Set the total height of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>height</strong> – The height to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.tabBar">
+<span class="sig-name descname"><span class="pre">tabBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../tabbar/index.html#pyqtribbon.tabbar.RibbonTabBar" title="pyqtribbon.tabbar.RibbonTabBar"><span class="pre">pyqtribbon.tabbar.RibbonTabBar</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L220-L225"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.tabBar" title="Permalink to this definition"></a></dt>
+<dd><p>Return the tab bar of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The tab bar of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.quickAccessToolBar">
+<span class="sig-name descname"><span class="pre">quickAccessToolBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qtpy.QtWidgets.QToolBar</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L227-L232"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.quickAccessToolBar" title="Permalink to this definition"></a></dt>
+<dd><p>Return the quick access toolbar of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The quick access toolbar of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addQuickAccessButton">
+<span class="sig-name descname"><span class="pre">addQuickAccessButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtWidgets.QToolButton</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L234-L240"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addQuickAccessButton" title="Permalink to this definition"></a></dt>
+<dd><p>Add a button to the quick access bar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>button</strong> – The button to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setQuickAccessButtonHeight">
+<span class="sig-name descname"><span class="pre">setQuickAccessButtonHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L242-L247"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setQuickAccessButtonHeight" title="Permalink to this definition"></a></dt>
+<dd><p>Set the height of the quick access buttons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>height</strong> – The height to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.title">
+<span class="sig-name descname"><span class="pre">title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L249-L254"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.title" title="Permalink to this definition"></a></dt>
+<dd><p>Return the title of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The title of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setTitle">
+<span class="sig-name descname"><span class="pre">setTitle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L256-L261"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setTitle" title="Permalink to this definition"></a></dt>
+<dd><p>Set the title of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>title</strong> – The title to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.rightToolBar">
+<span class="sig-name descname"><span class="pre">rightToolBar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qtpy.QtWidgets.QToolBar</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L263-L268"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.rightToolBar" title="Permalink to this definition"></a></dt>
+<dd><p>Return the right toolbar of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The right toolbar of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addRightToolButton">
+<span class="sig-name descname"><span class="pre">addRightToolButton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">button</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtWidgets.QToolButton</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L270-L276"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addRightToolButton" title="Permalink to this definition"></a></dt>
+<dd><p>Add a widget to the right button bar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>button</strong> – The button to add.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setRightToolBarHeight">
+<span class="sig-name descname"><span class="pre">setRightToolBarHeight</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">24</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L278-L283"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setRightToolBarHeight" title="Permalink to this definition"></a></dt>
+<dd><p>Set the height of the right buttons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>height</strong> – The height to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.helpRibbonButton">
+<span class="sig-name descname"><span class="pre">helpRibbonButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qtpy.QtWidgets.QToolButton</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L285-L290"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.helpRibbonButton" title="Permalink to this definition"></a></dt>
+<dd><p>Return the help button of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The help button of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setHelpButtonIcon">
+<span class="sig-name descname"><span class="pre">setHelpButtonIcon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtGui.QIcon</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L292-L297"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setHelpButtonIcon" title="Permalink to this definition"></a></dt>
+<dd><p>Set the icon of the help button.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>icon</strong> – The icon to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.removeHelpButton">
+<span class="sig-name descname"><span class="pre">removeHelpButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L299-L301"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.removeHelpButton" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the help button from the ribbon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.collapseRibbonButton">
+<span class="sig-name descname"><span class="pre">collapseRibbonButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qtpy.QtWidgets.QToolButton</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L303-L308"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.collapseRibbonButton" title="Permalink to this definition"></a></dt>
+<dd><p>Return the collapse ribbon button.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The collapse ribbon button.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setCollapseButtonIcon">
+<span class="sig-name descname"><span class="pre">setCollapseButtonIcon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">icon</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtGui.QIcon</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L310-L315"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setCollapseButtonIcon" title="Permalink to this definition"></a></dt>
+<dd><p>Set the icon of the min button.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>icon</strong> – The icon to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.removeCollapseButton">
+<span class="sig-name descname"><span class="pre">removeCollapseButton</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L317-L319"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.removeCollapseButton" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the min button from the ribbon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.category">
+<span class="sig-name descname"><span class="pre">category</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L321-L327"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.category" title="Permalink to this definition"></a></dt>
+<dd><p>Return the category with the given name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>name</strong> – The name of the category.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The category with the given name.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.categories">
+<span class="sig-name descname"><span class="pre">categories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L329-L334"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.categories" title="Permalink to this definition"></a></dt>
+<dd><p>Return a list of categories of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A dict of categories of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addCategoriesBy">
+<span class="sig-name descname"><span class="pre">addCategoriesBy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L336-L377"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addCategoriesBy" title="Permalink to this definition"></a></dt>
+<dd><p>Add categories from a dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>data</strong> – <p>The dict of categories. The dict is of the form:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;category-title&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">RibbonCategoryStyle</span><span class="o">.</span><span class="n">Normal</span><span class="p">,</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">QtCore</span><span class="o">.</span><span class="n">Qt</span><span class="o">.</span><span class="n">red</span><span class="p">,</span>
+        <span class="s2">&quot;panels&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;panel-title&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;showPanelOptionButton&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+                <span class="s2">&quot;widgets&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;widget-name&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Button&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;arguments&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;key1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;key2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span>
+                        <span class="p">}</span>
+                    <span class="p">},</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dict of categories of the ribbon.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addCategory">
+<span class="sig-name descname"><span class="pre">addCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">RibbonCategoryStyle.Normal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtGui.QColor</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonNormalCategory" title="pyqtribbon.category.RibbonNormalCategory"><span class="pre">pyqtribbon.category.RibbonNormalCategory</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategory" title="pyqtribbon.category.RibbonContextCategory"><span class="pre">pyqtribbon.category.RibbonContextCategory</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L379-L421"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new category to the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – The title of the category.</p></li>
+<li><p><strong>style</strong> – The button style of the category.</p></li>
+<li><p><strong>color</strong> – The color of the context category, only used if style is Context, if None, the default color
+will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The newly created category.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addNormalCategory">
+<span class="sig-name descname"><span class="pre">addNormalCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonNormalCategory" title="pyqtribbon.category.RibbonNormalCategory"><span class="pre">pyqtribbon.category.RibbonNormalCategory</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L423-L429"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addNormalCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new category to the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>title</strong> – The title of the category.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The newly created category.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addContextCategory">
+<span class="sig-name descname"><span class="pre">addContextCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtGui.QColor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">qtpy.QtCore.Qt.GlobalColor</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">QtCore.Qt.blue</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategory" title="pyqtribbon.category.RibbonContextCategory"><span class="pre">pyqtribbon.category.RibbonContextCategory</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L431-L442"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addContextCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Add a new context category to the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> – The title of the category.</p></li>
+<li><p><strong>color</strong> – The color of the context category, if None, the default color will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The newly created category.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.addContextCategories">
+<span class="sig-name descname"><span class="pre">addContextCategories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">titles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">qtpy.QtGui.QColor</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">qtpy.QtCore.Qt.GlobalColor</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">QtCore.Qt.blue</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategories" title="pyqtribbon.category.RibbonContextCategories"><span class="pre">pyqtribbon.category.RibbonContextCategories</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L444-L466"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.addContextCategories" title="Permalink to this definition"></a></dt>
+<dd><p>Add a group of context categories with the same tab color to the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name of the context categories.</p></li>
+<li><p><strong>titles</strong> – The title of the category.</p></li>
+<li><p><strong>color</strong> – The color of the context category, if None, the default color will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The newly created category.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.showCategoryByIndex">
+<span class="sig-name descname"><span class="pre">showCategoryByIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L468-L476"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.showCategoryByIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Show category by tab index</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>index</strong> – tab index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.showContextCategory">
+<span class="sig-name descname"><span class="pre">showContextCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategory" title="pyqtribbon.category.RibbonContextCategory"><span class="pre">pyqtribbon.category.RibbonContextCategory</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategories" title="pyqtribbon.category.RibbonContextCategories"><span class="pre">pyqtribbon.category.RibbonContextCategories</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L478-L492"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.showContextCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Show the given category or categories, if it is not a context category, nothing happens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category</strong> – The category to show.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.hideContextCategory">
+<span class="sig-name descname"><span class="pre">hideContextCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategory" title="pyqtribbon.category.RibbonContextCategory"><span class="pre">pyqtribbon.category.RibbonContextCategory</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategories" title="pyqtribbon.category.RibbonContextCategories"><span class="pre">pyqtribbon.category.RibbonContextCategories</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L494-L504"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.hideContextCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Hide the given category or categories, if it is not a context category, nothing happens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category</strong> – The category to hide.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.categoryVisible">
+<span class="sig-name descname"><span class="pre">categoryVisible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L506-L513"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.categoryVisible" title="Permalink to this definition"></a></dt>
+<dd><p>Return whether the category is shown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category</strong> – The category to check.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Whether the category is shown.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.removeCategory">
+<span class="sig-name descname"><span class="pre">removeCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L515-L521"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.removeCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Remove a category from the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category</strong> – The category to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.removeCategories">
+<span class="sig-name descname"><span class="pre">removeCategories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">categories</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonContextCategories" title="pyqtribbon.category.RibbonContextCategories"><span class="pre">pyqtribbon.category.RibbonContextCategories</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L523-L529"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.removeCategories" title="Permalink to this definition"></a></dt>
+<dd><p>Remove a list of categories from the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>categories</strong> – The categories to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setCurrentCategory">
+<span class="sig-name descname"><span class="pre">setCurrentCategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L531-L543"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setCurrentCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Set the current category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category</strong> – The category to set.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.currentCategory">
+<span class="sig-name descname"><span class="pre">currentCategory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference internal" href="../category/index.html#pyqtribbon.category.RibbonCategory" title="pyqtribbon.category.RibbonCategory"><span class="pre">pyqtribbon.category.RibbonCategory</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L545-L550"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.currentCategory" title="Permalink to this definition"></a></dt>
+<dd><p>Return the current category.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current category.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.minimumSizeHint">
+<span class="sig-name descname"><span class="pre">minimumSizeHint</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">qtpy.QtCore.QSize</span></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L552-L557"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.minimumSizeHint" title="Permalink to this definition"></a></dt>
+<dd><p>Return the minimum size hint of the widget.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The minimum size hint.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.showRibbon">
+<span class="sig-name descname"><span class="pre">showRibbon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L563-L570"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.showRibbon" title="Permalink to this definition"></a></dt>
+<dd><p>Show the ribbon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.hideRibbon">
+<span class="sig-name descname"><span class="pre">hideRibbon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L572-L579"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.hideRibbon" title="Permalink to this definition"></a></dt>
+<dd><p>Hide the ribbon.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.ribbonVisible">
+<span class="sig-name descname"><span class="pre">ribbonVisible</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L581-L586"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.ribbonVisible" title="Permalink to this definition"></a></dt>
+<dd><p>Get the visibility of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if the ribbon is visible, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyqtribbon.ribbonbar.RibbonBar.setRibbonVisible">
+<span class="sig-name descname"><span class="pre">setRibbonVisible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="hxr-hoverxref hxr-tooltip reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/haiiliin/pyqtribbon/blob/main/pyqtribbon/ribbonbar.py#L588-L593"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyqtribbon.ribbonbar.RibbonBar.setRibbonVisible" title="Permalink to this definition"></a></dt>
+<dd><p>Set the visibility of the ribbon.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>visible</strong> – True to show the ribbon, False to hide it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, WANG Hailin.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

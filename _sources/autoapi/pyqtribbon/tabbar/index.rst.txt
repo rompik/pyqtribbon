@@ -1,0 +1,81 @@
+:orphan:
+
+:py:mod:`pyqtribbon.tabbar`
+===========================
+
+.. py:module:: pyqtribbon.tabbar
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.tabbar.RibbonTabBar
+
+
+
+
+.. py:class:: RibbonTabBar(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QTabBar`
+
+   The TabBar for the title widget.
+
+   .. py:method:: indexOf(tabName: str) -> int
+
+      Return the index of the tab with the given name.
+
+      :param tabName: The name of the tab.
+      :return: The index of the tab.
+
+
+   .. py:method:: tabTitles() -> List[str]
+
+      Return the titles of all tabs.
+
+      :return: The titles of all tabs.
+
+
+   .. py:method:: addTab(text: str, color: qtpy.QtGui.QColor = None, *args, **kwargs) -> int
+
+      Add a new tab to the tab bar.
+
+      :param text: The text of the tab.
+      :param color: The color of the tab.
+      :return: The index of the tab.
+
+
+   .. py:method:: addAssociatedTabs(name: str, texts: List[str], color: qtpy.QtGui.QColor) -> List[int]
+
+      Add associated multiple tabs which have the same color to the tab bar.
+
+      :param name: The name of the context category.
+      :param texts: The texts of the tabs.
+      :param color: The color of the tabs.
+      :return: The indices of the tabs.
+
+
+   .. py:method:: removeAssociatedTabs(titles: List[str]) -> None
+
+      Remove tabs with the given titles.
+
+      :param titles: The titles of the tabs to remove.
+
+
+   .. py:method:: currentTabColor() -> qtpy.QtGui.QColor
+
+      Current tab color
+
+      :return: Current tab color
+
+
+   .. py:method:: paintEvent(a0: qtpy.QtGui.QPaintEvent) -> None
+
+      Paint the tab bar.
+
+
+

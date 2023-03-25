@@ -1,0 +1,29 @@
+:orphan:
+
+:py:mod:`pyqtribbon.utils`
+==========================
+
+.. py:module:: pyqtribbon.utils
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.utils.DataFile
+
+
+
+.. py:function:: DataFile(filename)
+
+   Return the path to a data file.
+
+   :param filename: The filename of the data file.
+   :return: The path to the data file.
+
+

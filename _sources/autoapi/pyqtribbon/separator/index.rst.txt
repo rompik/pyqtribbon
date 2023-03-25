@@ -1,0 +1,59 @@
+:orphan:
+
+:py:mod:`pyqtribbon.separator`
+==============================
+
+.. py:module:: pyqtribbon.separator
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.separator.RibbonSeparator
+   pyqtribbon.separator.RibbonHorizontalSeparator
+   pyqtribbon.separator.RibbonVerticalSeparator
+
+
+
+
+.. py:class:: RibbonSeparator(orientation=QtCore.Qt.Vertical, width=6, parent=None)           RibbonSeparator(parent=None)
+
+   Bases: :py:obj:`qtpy.QtWidgets.QFrame`
+
+   The RibbonSeparator is a separator that can be used to separate widgets in a ribbon.
+
+   .. py:method:: sizeHint() -> qtpy.QtCore.QSize
+
+      Return the size hint.
+
+
+   .. py:method:: setTopBottomMargins(top: int, bottom: int) -> None
+
+      Set the top and bottom margins.
+
+
+   .. py:method:: paintEvent(event: qtpy.QtGui.QPaintEvent) -> None
+
+      Paint the separator.
+
+
+
+.. py:class:: RibbonHorizontalSeparator(width: int = 6, parent=None)
+
+   Bases: :py:obj:`RibbonSeparator`
+
+   Horizontal separator.
+
+
+.. py:class:: RibbonVerticalSeparator(width: int = 6, parent=None)
+
+   Bases: :py:obj:`RibbonSeparator`
+
+   Vertical separator.
+
+

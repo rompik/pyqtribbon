@@ -1,0 +1,28 @@
+:orphan:
+
+:py:mod:`pyqtribbon.menu`
+=========================
+
+.. py:module:: pyqtribbon.menu
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   pyqtribbon.menu.RibbonPermanentMenu
+
+
+
+
+.. py:class:: RibbonPermanentMenu(title: str = '', parent=None)           RibbonPermanentMenu(parent=None)
+
+   Bases: :py:obj:`RibbonMenu`
+
+   A permanent menu.
+
+
